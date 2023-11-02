@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+   
+    agent { docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' } }
     
     stages {
         stage('Checkout') {
@@ -13,19 +14,5 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        
-        // stage('Test') {
-        //     steps {
-        //         sh 'mvn test' // Adjust the test command as per your testing framework
-        //     }
-        // }
-        
-        // stage('Deploy') {
-        //     steps {
-        //         sh 'cp target/your-app.war /path/to/tomcat/webapps'
-        //         sh '/path/to/tomcat/bin/shutdown.sh'
-        //         sh '/path/to/tomcat/bin/startup.sh'
-        //     }
-        // }
     }
 }
