@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/your-spring-boot-app.git'
+                git 'https://github.com/Itsmeambro/testing.git'
             }
         }
         
@@ -20,12 +20,12 @@ pipeline {
         //     }
         // }
         
-        stage('Deploy') {
-            steps {
-                sh 'cp target/your-app.war /path/to/tomcat/webapps'
-                sh '/path/to/tomcat/bin/shutdown.sh'
-                sh '/path/to/tomcat/bin/startup.sh'
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         sh 'cp target/your-app.war /path/to/tomcat/webapps'
+        //         sh '/path/to/tomcat/bin/shutdown.sh'
+        //         sh '/path/to/tomcat/bin/startup.sh'
+        //     }
+        // }
     }
 }
