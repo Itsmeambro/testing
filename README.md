@@ -7,6 +7,7 @@ git branch -M main
 git remote add origin https://github.com/Itsmeambro/testing.git
 git push -u origin main
 
+#commands
 git remote add origin https://github.com/Itsmeambro/testing.git
 git branch -M main
 git push -u origin main
