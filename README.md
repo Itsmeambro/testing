@@ -13,5 +13,5 @@ git branch -M main
 git push -u origin main
 
 
-git config --global user.email "alanbiju8137@gmail.com"
+git config --global user.email "al@gmail.com"
 git config --global user.name "Itsmeambro"
