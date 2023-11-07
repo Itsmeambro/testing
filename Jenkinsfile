@@ -1,18 +1,16 @@
 pipeline {
-   
-    agent { docker { image 'maven:3.9.5-eclipse-temurin-17-alpine' } }
-    
+    agent any
     stages {
-        stage('Checkout') {
+        stage('Clone') {
             steps {
-                git 'https://github.com/Itsmeambro/testing.git'
+                git 'https://github.com/user/repo.git'
             }
         }
-        
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean install'
             }
-        }
+        }        
     }
 }
+
