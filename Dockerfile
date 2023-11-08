@@ -1,4 +1,4 @@
-FROM maven:3.8.2-jdk-11 AS build
+FROM maven:3.8.4-openjdk-19 AS build
 COPY . .
 RUN mvn clean install
 RUN mvn clean package 
