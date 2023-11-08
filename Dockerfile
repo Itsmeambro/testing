@@ -1,10 +1,11 @@
 FROM maven:3.8.4-openjdk-19
 # COPY . .
-RUN mvn clean install
+# RUN mvn clean install
 RUN mvn clean package 
 # -DskipTests
-RUN pwd
+
 FROM eclipse-temurin:19.0.1_10-jdk-alpine
+RUN pwd
 COPY target/thymeleaf-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
 
