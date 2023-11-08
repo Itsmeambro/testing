@@ -5,7 +5,7 @@ RUN mvn clean package
 # -DskipTests
 
 FROM eclipse-temurin:19.0.1_10-jdk-alpine
-RUN pwd
+RUN ls
 # COPY /thymeleaf-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-jar","thymeleaf-0.0.1-SNAPSHOT.jar"]
 
