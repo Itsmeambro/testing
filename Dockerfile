@@ -5,9 +5,9 @@ RUN mvn clean package
 # -DskipTests
 RUN pwd
 FROM eclipse-temurin:19.0.1_10-jdk-alpine
-# ARG JAR_FILE=target/thymeleaf-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","target/thymeleaf-0.0.1-SNAPSHOT.jar"]
-# COPY target/thymeleaf-0.0.1-SNAPSHOT.jar app.jar
+COPY target/thymeleaf-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
+
 # COPY ${JAR_FILE} app.jar
 # EXPOSE 8080
 # ENTRYPOINT ["java","-jar","target/thymeleaf-0.0.1-SNAPSHOT.jar"]
