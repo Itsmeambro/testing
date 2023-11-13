@@ -33,5 +33,10 @@ public class SampleController {
 		String dateStr = format.format(date);
 		return dateStr;
 	}
+	@GetMapping("/name")
+	String getName() {
+		
+		return "Musk";
+	}
 
 }
