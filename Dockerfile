@@ -1,7 +1,7 @@
-FROM maven:3.8.4-openjdk-19
-# COPY . .
-# RUN mvn clean install
-RUN mvn clean package 
+# FROM maven:3.8.4-openjdk-19
+# # COPY . .
+# # RUN mvn clean install
+# RUN mvn clean package 
 # -DskipTests
 
 FROM eclipse-temurin:19.0.1_10-jdk-alpine
