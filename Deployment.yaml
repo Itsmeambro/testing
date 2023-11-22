@@ -18,7 +18,7 @@ spec:
       - name: sample
         image:  darkshark555/sample:latest
         ports:
-          - containerPort: 8080
+          - containerPort: 7080
 ---
 apiVersion: v1
 kind: Service
@@ -30,6 +30,6 @@ spec:
   type: ClusterIP
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 7080
+      targetPort: 7080
 
