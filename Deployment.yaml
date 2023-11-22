@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sample
-        image:  darkshark555/sample:1.0
+        image:  darkshark555/sample:latest
         ports:
           - containerPort: 8080
 ---
